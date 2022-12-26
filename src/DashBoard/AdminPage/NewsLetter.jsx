@@ -6,7 +6,6 @@ const NewsLetter = () => {
 
     const [user, setUser] = useState([])
     const [selectedOptions, setSelectedOptions] = useState();
-    const [userOptions, setUserOptions] = useState();
 
     const optionList = [
         { value: "Web Developer", label: "Web Developer" },
@@ -16,21 +15,11 @@ const NewsLetter = () => {
         { value: "Figma Designer", label: "Figma Designer" }
     ];
 
-    const userOptionList = [
-        { value: "Candidate", label: "Candidate" },
-        { value: "Recruiter", label: "Recruiter" },
-        { value: "All user", label: "All user" },
-    ];
-
     function handleSelect(data) {
         setSelectedOptions(data);
         // console.log(data);
     }
 
-    function handleUserSelect(data) {
-        setUserOptions(data);
-        // console.log(data);
-    }
 
 
     const formSubmit = (event) => {
@@ -42,7 +31,7 @@ const NewsLetter = () => {
         const location = form.location.value;
         const message = form.message.value;
         const data = {
-            subject, location, message, selectedOptions
+            subject, location, message, selectedOptions, user
         }
 
         console.log(data);
@@ -95,21 +84,6 @@ const NewsLetter = () => {
                         </div>
                     </div>
 
-                    {/* <div className="mb-2">
-                        <label>
-                            <span className="text-gray-700 mb-2">Skills</span>
-                            <div className="dropdown-container">
-                                <Select
-                                    options={userOptionList}
-                                    placeholder="Select User"
-                                    value={userOptions}
-                                    onChange={handleUserSelect}
-                                    isSearchable={true}
-                                    isMulti
-                                />
-                            </div>
-                        </label>
-                    </div> */}
                     <div className="mb-2">
                         <label>
                             <span className="text-gray-700 mb-2">Skills</span>
