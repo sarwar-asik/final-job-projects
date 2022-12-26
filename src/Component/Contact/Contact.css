@@ -1,0 +1,10 @@
+.Toastify__toast {
+  color: var(--color-white) !important;
+  border-radius: 8px !important;
+  background: var(--color-bg-variant) !important;
+}
+
+.Toastify__close-button--light {
+  color: var(--color-white) !important;
+  opacity: 1 !important;
+}

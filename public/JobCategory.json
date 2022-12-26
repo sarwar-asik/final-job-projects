@@ -1,0 +1,57 @@
+[
+    {
+        "id": 1,
+        "job_title": "Remote",
+        "img": "https://static.naukimg.com/s/0/0/i/trending-naukri/remote.svg"
+    },
+    {
+        "id": 2,
+        "job_title": "MNC",
+        "img": "https://static.naukimg.com/s/0/0/i/trending-naukri/mnc.svg"
+    },
+    {
+        "id": 3,
+        "job_title": "Freshers",
+        "img": "https://static.naukimg.com/s/0/0/i/trending-naukri/freshers.svg"
+    },
+    {
+        "id": 4,
+        "job_title": "Finance",
+        "img": "https://static.naukimg.com/s/0/0/i/trending-naukri/finance.svg"
+    },
+    {
+        "id": 5,
+        "job_title": "Project Management",
+        "img": "https://static.naukimg.com/s/0/0/i/trending-naukri/project-management.svg"
+    },
+    {
+        "id": 6,
+        "job_title": "Engineering",
+        "img": "https://static.naukimg.com/s/0/0/i/trending-naukri/engineering.svg"
+    },
+    {
+        "id": 7,
+        "job_title": "Temporary WFH",
+        "img": "https://static.naukimg.com/s/0/0/i/trending-naukri/temporary-wfh.svg"
+    },
+    {
+        "id": 8,
+        "job_title": "HR",
+        "img": "https://static.naukimg.com/s/0/0/i/trending-naukri/hr.svg"
+    },
+    {
+        "id": 9,
+        "job_title": "Fortune 500",
+        "img": "https://static.naukimg.com/s/0/0/i/trending-naukri/fortune-500.svg"
+    },
+    {
+        "id": 10,
+        "job_title": "Software",
+        "img": "https://static.naukimg.com/s/0/0/i/trending-naukri/software.svg"
+    },
+    {
+        "id": 11,
+        "job_title": "Sales",
+        "img": "https://static.naukimg.com/s/0/0/i/trending-naukri/sales.svg"
+    }
+]

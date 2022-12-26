@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "company_name": "myDala.com",
+        "img": "https://img.naukimg.com/logo_images/groups/v1/740018.gif"
+    },
+    {
+        "id": 2,
+        "company_name": "Mak Net",
+        "img": "https://img.naukimg.com/logo_images/groups/v1/6123965.gif"
+    },
+    {
+        "id": 3,
+        "company_name": "WFX",
+        "img": "https://img.naukimg.com/logo_images/groups/v1/4664103.gif"
+    },
+    {
+        "id": 4,
+        "company_name": "SAF",
+        "img": "https://img.naukimg.com/logo_images/groups/v1/232840.gif"
+    },
+    {
+        "id": 5,
+        "company_name": "FedEx",
+        "img": "https://img.naukimg.com/logo_images/groups/v1/1482768.gif"
+    },
+    {
+        "id": 6,
+        "company_name": "valmont",
+        "img": "https://img.naukimg.com/logo_images/groups/v1/4638057.gif"
+    },
+    {
+        "id": 7,
+        "company_name": "USIT",
+        "img": "https://img.naukimg.com/logo_images/groups/v1/229948.gif"
+    },
+    {
+        "id": 8,
+        "company_name": "TATA",
+        "img": "https://img.naukimg.com/logo_images/groups/v1/618824.gif"
+    }
+]
