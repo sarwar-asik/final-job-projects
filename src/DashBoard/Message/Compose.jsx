@@ -1,23 +1,10 @@
 import React, { useState } from 'react';
-import Select from "react-select";
+import { ReactMultiEmail } from "react-multi-email";
+import 'react-multi-email/dist/style.css';
 
 const Compose = () => {
-    const [selectedOptions, setSelectedOptions] = useState();
-
-
-    const optionList = [
-        { value: "developer@gmail.com", label: "developer@gmail.com" },
-        { value: "designer@gmail.com", label: "designer@gmail.com" },
-        { value: "graphics@gmail.com", label: "graphics@gmail.com" },
-        { value: "appDeveloper@gmail.com", label: "appDeveloper@gmail.com" },
-        { value: "figmaDesigner@gmail.com", label: "figmaDesigner@gmail.com" }
-    ];
-
-
-    function handleSelect(data) {
-        setSelectedOptions(data);
-        // console.log(data);
-    }
+    const [emails, setEmails] = useState([]);
+    const [focused, setFocused] = useState(false);
 
 
 
@@ -31,28 +18,35 @@ const Compose = () => {
     }
     return (
         <>
-
             <input type="checkbox" id="Compose_modal" className="modal-toggle" />
             <div className="modal">
                 <div className="modal-box bg-white relative">
+
                     <label htmlFor="Compose_modal" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
                     <h3 className="text-2xl font-bold text-secondary">Sand Message</h3>
                     <form onSubmit={handleBooking} className='grid grid-cols-1 gap-3 mt-10'>
                         <div className="">
-                            <label>
-                                <span className="text-gray-700 mb-2">Sand To</span>
-                                <div className="dropdown-container">
-                                    <Select
-                                        className='input-bordered'
-                                        options={optionList}
-                                        placeholder="Select Skills"
-                                        value={selectedOptions}
-                                        onChange={handleSelect}
-                                        isSearchable={true}
-                                        isMulti
-                                    />
-                                </div>
-                            </label>
+                            <h3>Email</h3>
+                            <ReactMultiEmail
+                                placeholder='Input your email'
+                                emails={emails}
+                                onChange={(_emails) => {
+                                    setEmails(_emails);
+                                }}
+                                autoFocus={true}
+                                onFocus={() => setFocused(true)}
+                                onBlur={() => setFocused(false)}
+                                getLabel={(email, index, removeEmail) => {
+                                    return (
+                                        <div data-tag key={index}>
+                                            <div data-tag-item>{email}</div>
+                                            <span data-tag-handle onClick={() => removeEmail(index)}>
+                                                ×
+                                            </span>
+                                        </div>
+                                    );
+                                }}
+                            />
                         </div>
                         <label htmlFor="header"></label>
                         <input name='header' type="text" placeholder="Subject" className="input input-bordered w-full " />

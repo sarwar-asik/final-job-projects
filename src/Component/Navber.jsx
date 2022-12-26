@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../ContextApi/AuthProvider/AuthProvider';
 import { FcBusinessman } from 'react-icons/fc';
+import logo from '../asset/logo.png';
 
 
 const NavBer = () => {
@@ -47,7 +48,10 @@ const NavBer = () => {
                 </div>
             </div>
             <div className="navbar-center">
-                <Link to={'/'} className="btn btn-ghost normal-case text-orange-500 font-bold text-2xl">Find A Job</Link>
+                <Link to={'/'} className="btn btn-ghost flex items-center normal-case text-orange-500 font-bold text-2xl">
+
+                    <img className='w-44' src={logo} alt="" />
+                </Link>
             </div>
             <div className="navbar-end">
                 {/* when user loging then show it, now testing  */}
