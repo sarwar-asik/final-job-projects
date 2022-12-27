@@ -18,6 +18,8 @@ import ReportedRecruiters from '../DashBoard/AdminPage/Reported/ReportedRecruite
 import ReportedJobs from '../DashBoard/AdminPage/Reported/ReportedJobs';
 import NewsLetter from '../DashBoard/AdminPage/NewsLetter';
 import MailingLayout from '../Layout/MailingLayout/MailingLayout';
+import InboxContainer from '../DashBoard/Message/InboxContainer';
+import SendBoxContainer from '../DashBoard/Message/SendBoxContainer';
 
 const router = createBrowserRouter([
     {
@@ -92,7 +94,21 @@ const router = createBrowserRouter([
     },
     {
         path: '/message',
-        element: <MailingLayout />
+        element: <MailingLayout />,
+        children: [
+            {
+                path: '/message',
+                element: <InboxContainer />
+            },
+            {
+                path: '/message/inbox',
+                element: <InboxContainer />
+            },
+            {
+                path: '/message/sendbox',
+                element: <SendBoxContainer />
+            }
+        ]
     }
 ])
 

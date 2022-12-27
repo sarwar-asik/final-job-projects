@@ -11,13 +11,17 @@ import control from '../../assets/control.png';
 import logo from '../../assets/logo.png';
 import NavBer from '../../Component/Navber';
 import Compose from '../../DashBoard/Message/Compose';
+import { Link, Outlet } from 'react-router-dom';
+
+
+
 
 const MailingLayout = () => {
 
     const [open, setOpen] = useState(true);
     const Menus = [
-        { title: "Inbox", src: Chat },
-        { title: "Sandbox", src: Chart_fill },
+        { title: "Inbox", src: Chat, route: "/message/inbox" },
+        { title: "Sandbox", src: Chart_fill, route: "/message/sendbox" },
         { title: "Accounts", src: User, gap: true },
         { title: "Schedule ", src: Calendar },
         { title: "Search", src: Search },
@@ -58,20 +62,21 @@ const MailingLayout = () => {
                             Menus.map((Menu, index) => (
                                 <li
                                     key={index}
-                                    className={`flex  rounded-md p-2 cursor-pointer hover:bg-light-white text-gray-300 text-sm items-center gap-x-4 
-                ${Menu.gap ? "mt-9" : "mt-2"} ${index === 0 && "bg-light-white"
-                                        } `}
                                 >
-                                    <img src={Menu.src} alt="" />
-                                    <span className={`${!open && "hidden"} origin-left duration-200`}>
-                                        {Menu.title}
-                                    </span>
+                                    <Link className={`flex  rounded-md p-2 cursor-pointer hover:bg-light-white text-gray-300 text-sm items-center gap-x-4 
+                ${Menu.gap ? "mt-9" : "mt-2"} active:bg-light-white "
+                                        } `} to={Menu.route}>
+                                        <img src={Menu.src} alt="" />
+                                        <span className={`${!open && "hidden"} origin-left duration-200`}>
+                                            {Menu.title}
+                                        </span>
+                                    </Link>
                                 </li>
                             ))}
                     </ul>
                 </div>
                 <div className="min-h-screen flex-1 p-7">
-                    <h1 className="text-2xl font-semibold ">Home Page</h1>
+                    <Outlet />
                 </div>
 
                 <Compose />
