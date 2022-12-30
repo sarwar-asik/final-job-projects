@@ -11,7 +11,7 @@ import { setAuthToken } from '../../AllApi/GetTokenApi/GetTokenApi';
 
 const Login = () => {
     const [userEmail, setUserEmail] = useState('')
-    const { login, loading, setLoading, signInWithGoogle, resetPassword } = useContext(AuthContext)
+    const { login, loading, setLoading, signInWithGoogle, resetPassword, userVerification, LogOut } = useContext(AuthContext)
     const navigate = useNavigate()
     const location = useLocation()
     const from = '/' || location.state?.from?.pathname;
@@ -31,9 +31,22 @@ const Login = () => {
             .then(result => {
                 // console.log(result)
                 if (result.user) {
-                    setAuthToken(userData);
-                    toast.success('Login Successful.....!')
-                    navigate(from, { replace: true })
+                    const user = result.user;
+                    if (!user.emailVerified === true) {
+                        toast.error('Please Verify You email.....!')
+                        userVerification()
+                            .then(() => {
+                                toast.success('Please Check your email');
+                                LogOut();
+                                const myTimeout = setTimeout(navigate('/verification'), 2000);
+                                setLoading(false)
+                            })
+                    }
+                    else {
+                        setAuthToken(userData);
+                        toast.success('Login Successful.....!')
+                        navigate(from, { replace: true })
+                    }
                 }
             })
             .catch(err => {

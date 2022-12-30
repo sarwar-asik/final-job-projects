@@ -21,6 +21,7 @@ import MailingLayout from '../Layout/MailingLayout/MailingLayout';
 import InboxContainer from '../DashBoard/Message/InboxContainer';
 import SendBoxContainer from '../DashBoard/Message/SendBoxContainer';
 import CheckOut from '../Component/Payment/CheckOut';
+import Verification from '../Component/Login/Verification';
 
 
 
@@ -53,6 +54,10 @@ const router = createBrowserRouter([
             {
                 path: '/payment',
                 element: <CheckOut />
+            },
+            {
+                path: '/verification',
+                element: <Verification />
             }
         ]
     },

@@ -19,7 +19,7 @@ const Register = () => {
     const navigate = useNavigate()
     const { register, formState: { errors, isValid }, handleSubmit } = useForm({ mode: 'all' });
     const [formStep, setFormStep] = useState(0)
-    const { createUser, upDateUser } = useContext(AuthContext)
+    const { createUser, upDateUser, userVerification, LogOut, setLoading } = useContext(AuthContext)
 
     const completeFormStep = () => {
         setFormStep(current => current + 1)
@@ -41,13 +41,20 @@ const Register = () => {
         createUser(userData.email, userData.pass)
             .then(result => {
                 // console.log(result.user);
-                setUserToDB(userData.name, userData.email, userData.photoURL, userData.userTypes)
                 if (result.user) {
                     upDateUser({ displayName: userData.name, photoURL: userData.photoURL })
-                        .then(result => {
-                            toast.success("Register Successfully")
-                            navigate('/')
-                        })
+                        .then(() => {
+                            userVerification()
+                                .then(() => {
+                                    toast.success('Please Check your email');
+                                    LogOut();
+                                    setLoading(false)
+                                    navigate('/verification')
+                                })
+                        }).catch((error) => {
+                            console.error(error)
+                        });
+                    setUserToDB(userData.name, userData.email, userData.photoURL, userData.userTypes)
                 }
             })
 
@@ -66,9 +73,8 @@ const Register = () => {
             email, userType
         }
         addUser(user);
-
         setAuthToken(userData);
-        navigate('/')
+
         toast.success('Congratulation! Your Successfully Create an Account.');
     }
 

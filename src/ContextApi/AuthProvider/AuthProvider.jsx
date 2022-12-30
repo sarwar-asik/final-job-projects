@@ -2,7 +2,7 @@ import React, { createContext, useEffect, useState } from 'react';
 import {
     createUserWithEmailAndPassword, getAuth,
     GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword,
-    signInWithPopup, signOut, updateProfile, updatePassword
+    signInWithPopup, signOut, updateProfile, updatePassword, sendEmailVerification
 } from 'firebase/auth';
 import app from '../../firebase/firebase.config';
 
@@ -25,6 +25,10 @@ const AuthProvider = ({ children }) => {
         return updateProfile(auth.currentUser, userInfo)
     }
 
+    const userVerification = () => {
+        setLoading(true)
+        return sendEmailVerification(auth.currentUser)
+    }
 
     const updatePass = (newPass) => {
         setLoading(true)
@@ -63,7 +67,8 @@ const AuthProvider = ({ children }) => {
         loading,
         signInWithGoogle,
         updatePass,
-        setLoading
+        setLoading,
+        userVerification
     }
 
     return (
