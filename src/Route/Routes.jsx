@@ -20,6 +20,9 @@ import NewsLetter from '../DashBoard/AdminPage/NewsLetter';
 import MailingLayout from '../Layout/MailingLayout/MailingLayout';
 import InboxContainer from '../DashBoard/Message/InboxContainer';
 import SendBoxContainer from '../DashBoard/Message/SendBoxContainer';
+import CheckOut from '../Component/Payment/CheckOut';
+
+
 
 const router = createBrowserRouter([
     {
@@ -46,6 +49,10 @@ const router = createBrowserRouter([
             {
                 path: '/register',
                 element: <Register />
+            },
+            {
+                path: '/payment',
+                element: <CheckOut />
             }
         ]
     },

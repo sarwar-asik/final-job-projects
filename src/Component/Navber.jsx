@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../ContextApi/AuthProvider/AuthProvider';
 import { FcBusinessman } from 'react-icons/fc';
 import logo from '../asset/logo.png';
+import coin from '../asset/Vlaunchu_coin.png';
 
 
 const NavBer = () => {
@@ -29,6 +30,7 @@ const NavBer = () => {
                     mt-3 p-2 shadow bg-slate-900 text-orange-500 text-xl rounded-box w-52"
                     >
                         <li><Link to={'/'}>Homepage</Link></li>
+                        <li><Link to={'/payment'}>Payment</Link></li>
                         {
                             user &&
                             <li><Link to={'/findJob'}>Find Jobs</Link></li>
@@ -72,10 +74,18 @@ const NavBer = () => {
                                 className="menu menu-compact dropdown-content 
                     mt-3 p-2 shadow bg-slate-900 text-orange-500 rounded-box w-52">
                                 <li>
-                                    <a className="justify-between">
+                                    <Link className="justify-between">
                                         Profile
                                         <span className="badge">New</span>
-                                    </a>
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link className="justify-between">
+                                        wallet <span className='flex items-center'>
+                                            <p>100</p>
+                                            <img className='w-8 ml-1' src={coin} alt="" />
+                                        </span>
+                                    </Link>
                                 </li>
                                 <li><Link to={'/dashboard'}>DashBoard</Link></li>
                                 <li><Link to={'/message'}>Messages</Link></li>
