@@ -22,6 +22,7 @@ import InboxContainer from '../DashBoard/Message/InboxContainer';
 import SendBoxContainer from '../DashBoard/Message/SendBoxContainer';
 import CheckOut from '../Component/Payment/CheckOut';
 import Verification from '../Component/Login/Verification';
+import AddAJobs from '../DashBoard/RecruiterPage/AddAJobs/AddAJobs';
 
 
 
@@ -101,6 +102,10 @@ const router = createBrowserRouter([
             {
                 path: '/dashboard/reportedRecruiters',
                 element: <ReportedRecruiters />
+            },
+            {
+                path: '/dashboard/addAJobs',
+                element: <AddAJobs />
             }
         ]
     },
