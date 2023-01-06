@@ -21,12 +21,12 @@ const FindJob = () => {
         setChecked(updatedList);
     };
 
-    const checkedItems = checked.length
-        ? checked.reduce((total, item) => {
-            return total + ", " + item;
-        })
-        : "";
-    console.log(checked);
+    // const checkedItems = checked.length
+    //     ? checked.reduce((total, item) => {
+    //         return total + ", " + item;
+    //     })
+    //     : "";
+    // console.log(checked);
 
     var isChecked = (item) =>
         checked.includes(item) ? "checked-item" : "not-checked-item";
@@ -41,12 +41,13 @@ const FindJob = () => {
         setExpChecked(updatedExpList);
     };
 
-    const checkedExpItems = expChecked.length
-        ? expChecked.reduce((total, item) => {
-            return total + ", " + item;
-        })
-        : "";
-    console.log(expChecked);
+    // const checkedExpItems = expChecked.length
+    //     ? expChecked.reduce((total, item) => {
+    //         return total + ", " + item;
+    //     })
+    //     : "";
+    // console.log(expChecked);
+
     var isExpChecked = (item) =>
         expChecked.includes(item) ? "checked-item" : "not-checked-item";
 

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import img from '../../asset/11.jpg';
 
 const Jobs = ({ allJobs, setSearch }) => {
@@ -36,7 +37,11 @@ const Jobs = ({ allJobs, setSearch }) => {
                                         <div className="flex items-center">
                                             <img src={img} className="w-16 h-16 rounded-full mr-5" alt="noimage" />
                                             <div>
-                                                <h2 className="text-2xl font-bold">{jobs.job_details.job.job_title}</h2>
+                                                <Link to={`/details/${jobs?._id}`} className="text-2xl font-bold">
+                                                    <h2>
+                                                        {jobs.job_details.job.job_title} {jobs?._id}
+                                                    </h2>
+                                                </Link>
                                                 <h5 className="">{jobs.job_details.job.jobType} - {jobs.job_details.experience}</h5>
                                             </div>
                                         </div>

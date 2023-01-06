@@ -23,6 +23,7 @@ import SendBoxContainer from '../DashBoard/Message/SendBoxContainer';
 import CheckOut from '../Component/Payment/CheckOut';
 import Verification from '../Component/Login/Verification';
 import AddAJobs from '../DashBoard/RecruiterPage/AddAJobs/AddAJobs';
+import JobDetails from '../Component/FindJob/JobDetails';
 
 
 
@@ -42,7 +43,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/findJob',
-                element: <PrivateRoute><FindJob /></PrivateRoute>
+                element: <FindJob />
             },
             {
                 path: '/login',
@@ -59,6 +60,11 @@ const router = createBrowserRouter([
             {
                 path: '/verification',
                 element: <Verification />
+            },
+            {
+                path: '/details/:id',
+                loader: ({ params }) => fetch(`http://localhost:5000/jobDetails/${params.id}`),
+                element: <JobDetails />
             }
         ]
     },
