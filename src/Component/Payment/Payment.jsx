@@ -85,7 +85,7 @@ const Payment = ({ data }) => {
     }
 
     useEffect(() => {
-        fetch(`http://localhost:5000/payment/intent`, {
+        fetch(`https://find-job-server.vercel.app/payment/intent`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

@@ -32,7 +32,7 @@ const AddAJobs = () => {
 
     useEffect(() => {
         setAddLoading(true)
-        fetch('http://localhost:5000/currency')
+        fetch('https://find-job-server.vercel.app/currency')
             .then(res => res.json())
             .then(data => {
                 setCurrencys(data)
@@ -82,7 +82,7 @@ const AddAJobs = () => {
 
     const setDoctorToDB = (jobInfo) => {
 
-        fetch('http://localhost:5000/jobs', {
+        fetch('https://find-job-server.vercel.app/jobs', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

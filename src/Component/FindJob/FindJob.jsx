@@ -52,7 +52,7 @@ const FindJob = () => {
         expChecked.includes(item) ? "checked-item" : "not-checked-item";
 
     useEffect(() => {
-        fetch(`http://localhost:5000/jobs?jobstype=${search}`)
+        fetch(`https://find-job-server.vercel.app/jobs?jobstype=${search}`)
             .then(res => res.json())
             .then(data => {
                 setAllJobs(data)
@@ -63,7 +63,7 @@ const FindJob = () => {
 
     const handleToExp = () => {
 
-        fetch('http://localhost:5000/jobs/exp', {
+        fetch('https://find-job-server.vercel.app/jobs/exp', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
