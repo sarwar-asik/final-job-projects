@@ -40,7 +40,7 @@ const Contact = () => {
     };
     return (
         <div className="pb-7" data-aos="fade-up" data-aos-duration="1500">
-            <h2 className="text-3xl text-orange-500 mt-5 mb-8 font-bold text-center">Contact US</h2>
+            <h2 className="text-3xl text-white mt-5 mb-8 font-bold text-center">Contact Us</h2>
             <div className="w-3/4 grid md:grid-cols-2 sm:grid-cols-1 h-full  gap-6 mx-auto 
             "
             >
@@ -51,9 +51,9 @@ const Contact = () => {
                 >
                     <article
                         className="bg-slate-900 p-5 md:w-8/12 sm:w-full  rounded-2xl 
-                        text-center border-red-300 text-orange-500"
+                        text-center border-red-300 text-white"
                     >
-                        <BiEnvelope className="mb-2 text-center inline-block text-3xl" />
+                        <BiEnvelope className="mb-2 text-center hover:bg-green-500 inline-block text-3xl" />
                         <h4>Email</h4>
                         <h5>Company@gmail.com</h5>
                         <a
@@ -64,7 +64,7 @@ const Contact = () => {
                     </article>
                     <article
                         className="bg-slate-900 p-5 md:w-8/12 sm:w-full  rounded-2xl 
-                         text-center border-red-300 text-orange-500"
+                         text-center border-red-300 text-white"
                     >
                         <RiMessengerLine className="mb-2 text-center inline-block text-3xl" />
                         <h4>Messenger</h4>
@@ -77,7 +77,7 @@ const Contact = () => {
                     </article>
                     <article
                         className="bg-slate-900 p-5 md:w-8/12 sm:w-full  rounded-2xl 
-                        text-center border-red-300 text-orange-500"
+                        text-center border-red-300 text-white"
                     >
                         <BsWhatsapp className="mb-2 text-center inline-block text-3xl" />
                         <h4>WhatsApp</h4>
@@ -101,23 +101,23 @@ const Contact = () => {
                         name="user_name"
                         placeholder="Your Full Name"
                         required
-                        className="w-full p-6 bg-transparent border-2 resize-none text-orange-500"
+                        className="w-full p-6 bg-transparent border-2 resize-none text-white"
                     />
                     <input
                         type="text"
                         name="user_email"
                         placeholder="Your Email"
                         required
-                        className="w-full p-6 bg-transparent border-2 resize-none text-orange-500"
+                        className="w-full p-6 bg-transparent border-2 resize-none text-white"
                     />
                     <textarea
                         name="message"
                         rows="7"
                         placeholder="Your Message"
                         required
-                        className="w-full p-6 bg-transparent border-2 resize-none text-orange-500"
+                        className="w-full p-6 bg-transparent border-2 resize-none text-white"
                     ></textarea>
-                    <button type="submit" value="Send" className="btn btn-primary text-orange-500 send-message">
+                    <button type="submit" value="Send" className="btn btn-primary text-white send-message">
                         Send Message
                     </button>
                 </form>

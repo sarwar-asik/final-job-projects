@@ -6,7 +6,7 @@ const Footer = () => {
     const { user, LogOut } = useContext(AuthContext)
     return (
         <>
-            <footer className="footer p-10 bg-slate-900 text-orange-500 rounded">
+            <footer className="footer p-10 bg-slate-100 text-black rounded">
                 <div>
                     <div className="grid grid-flow-col mb-4 gap-4 font-bold">
                         <Link to={'/'}>Homepage</Link>

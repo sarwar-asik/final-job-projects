@@ -5,78 +5,8 @@ const JobsDetails = () => {
     const data = useLoaderData();
     console.log(data)
     return (
-        <div>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
-            <h2>Hello details</h2>
+        <div className='bg-base-200 text-black'>
+           <h1>hello world</h1>
         </div>
     );
 };
