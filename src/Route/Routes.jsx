@@ -23,8 +23,7 @@ import SendBoxContainer from '../DashBoard/Message/SendBoxContainer';
 import CheckOut from '../Component/Payment/CheckOut';
 import Verification from '../Component/Login/Verification';
 import AddAJobs from '../DashBoard/RecruiterPage/AddAJobs/AddAJobs';
-import JobDetails from '../Component/FindJob/JobDetails';
-
+import JobsDetails from '../Component/FindJob/JobsDetails';
 
 
 const router = createBrowserRouter([
@@ -64,7 +63,7 @@ const router = createBrowserRouter([
             {
                 path: '/details/:id',
                 loader: ({ params }) => fetch(`http://localhost:5000/jobDetails/${params.id}`),
-                element: <JobDetails />
+                element: <JobsDetails />
             }
         ]
     },
