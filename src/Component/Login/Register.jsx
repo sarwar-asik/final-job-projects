@@ -82,7 +82,7 @@ const Register = () => {
 
     return (
         <div className='min-h-screen bg-no-repeat bg-cover' style={{ backgroundImage: `url(${img})` }}>
-            <h2 className='text-center text-3xl text-orange-500 font-bold pt-5 mb-8'>SignUp Form</h2>
+            <h2 className='text-center text-3xl text-white font-bold pt-5 mb-8'>SignUp Form</h2>
             <div className=" lg:w-4/12 md:8/12 sm:11/12 mx-auto rounded-lg shadow-2xl bg-slate-900">
                 <div className='shadow-shadow p-5' data-aos="fade-left" data-aos-duration='2000'>
                     <form onSubmit={handleSubmit(handleUserRegister)}>
@@ -90,14 +90,14 @@ const Register = () => {
                             formStep === 0 &&
                             <div>
                                 <div>
-                                    <label className='mb-3 text-orange-500 text-sm'>First Name</label>
+                                    <label className='mb-3 text-white text-sm'>First Name</label>
                                     <input type="text" required {...register("firstName", { required: true })} placeholder="Write your First name" className="w-full px-3 py-2 border rounded-md border-gray-300 focus:outline-green-500 bg-blue-200 text-gray-900" />
-                                    {errors.firstName && errors.firstName.type === "required" && <p className='text-orange-500 text-xs text-left' role="alert">This field is required</p>}
+                                    {errors.firstName && errors.firstName.type === "required" && <p className='text-white text-xs text-left' role="alert">This field is required</p>}
                                 </div>
                                 <div className="my-5">
-                                    <label className='mb-3 text-orange-500 text-sm'>Last Name</label>
+                                    <label className='mb-3 text-white text-sm'>Last Name</label>
                                     <input type="text" required {...register("lastName", { required: true })} placeholder="Write your last name" className="w-full px-3 py-2 border rounded-md border-gray-300 focus:outline-green-500 bg-blue-200 text-gray-900" />
-                                    {errors.lastName && errors.lastName.type === "required" && <p className='text-orange-500 text-xs text-left' role="alert">This field is required</p>}
+                                    {errors.lastName && errors.lastName.type === "required" && <p className='text-white text-xs text-left' role="alert">This field is required</p>}
                                 </div>
                                 <div className="text-center mb-10 md:mb-10 lg:mb-[100px] flex gap-4">
                                     {
@@ -108,7 +108,7 @@ const Register = () => {
                                 </div>
                                 {
                                     formStep === 0 &&
-                                    <p className='text-center text-orange-500 mt-[-50px] text-sm'>Already have an account?  <Link to='/login' className='uppercase text-theme-primary text-sm font-semibold hover:underline'>Login Here</Link></p>
+                                    <p className='text-center text-white mt-[-50px] text-sm'>Already have an account?  <Link to='/login' className='uppercase text-theme-primary text-sm font-semibold hover:underline'>Login Here</Link></p>
                                 }
                             </div>
                         }
@@ -116,20 +116,20 @@ const Register = () => {
                             formStep === 1 &&
                             <div>
                                 <div>
-                                    <label className='mb-3 text-orange-500 text-sm'>Your Email Address</label>
-                                    <input type="email" required {...register("email", { required: true, pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i })} placeholder="Write Email Address" className="w-full px-3 py-2 border rounded-md border-gray-300 focus:outline-green-500 bg-blue-200 text-gray-900" />{errors.email && errors.email.type === "required" && <p className='text-orange-500 text-xs text-left' role="alert">This field is required</p>}
+                                    <label className='mb-3 text-white text-sm'>Your Email Address</label>
+                                    <input type="email" required {...register("email", { required: true, pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i })} placeholder="Write Email Address" className="w-full px-3 py-2 border rounded-md border-gray-300 focus:outline-green-500 bg-blue-200 text-gray-900" />{errors.email && errors.email.type === "required" && <p className='text-white text-xs text-left' role="alert">This field is required</p>}
                                 </div>
                                 <div className="my-5">
-                                    <label className='mb-3 text-orange-500 text-sm'>Your Mobile Number</label>
+                                    <label className='mb-3 text-white text-sm'>Your Mobile Number</label>
                                     <input type="text" required {...register("photo", { required: true })} placeholder="Your Photo Url" className="w-full px-3 py-2 border rounded-md border-gray-300 focus:outline-green-500 bg-blue-200 text-gray-900" />
-                                    {errors.photo && errors.photo.type === "required" && <p className='text-orange-500 text-xs text-left' role="alert">This field is required</p>}
+                                    {errors.photo && errors.photo.type === "required" && <p className='text-white text-xs text-left' role="alert">This field is required</p>}
                                 </div>
                                 <div className="text-center mb-10 flex gap-4">
                                     {
                                         formStep > 0 &&
                                         <PrimaryButton handler={backPreviousStep}><HiArrowNarrowLeft /> Back</PrimaryButton>
                                     }
-                                    <PrimaryButton handler={completeFormStep} disabled={!isValid} type='button' >Next Step <HiArrowNarrowRight /></PrimaryButton>
+                                    <PrimaryButton handler={completeFormStep} disabled={!isValid} type='button'  >Next Step <HiArrowNarrowRight  /></PrimaryButton>
                                 </div>
                                 {
                                     formStep === 0 &&
@@ -141,15 +141,15 @@ const Register = () => {
                             formStep >= 2 &&
                             <>
                                 <div className="mb-10">
-                                    <label className='mb-3 text-orange-500 text-sm'>Write Your Password</label>
+                                    <label className='mb-3 text-white text-sm'>Write Your Password</label>
                                     <input type="password" {...register("password", {
                                         required: true,
                                         minLength: { value: 8, message: 'Password must be 8 character or longer!' },
                                     })} placeholder="Write Password" className="w-full px-3 py-2 border rounded-md border-gray-300 focus:outline-green-500 bg-blue-200 text-gray-900" />
-                                    {errors.password && <p className='text-orange-500 text-xs text-left' role="alert">{errors.password?.message}</p>}
+                                    {errors.password && <p className='text-white text-xs text-left' role="alert">{errors.password?.message}</p>}
                                 </div>
                                 <div className="mb-10">
-                                    <label className='mb-3 text-orange-500 text-sm'>Create Account For</label>
+                                    <label className='mb-3 text-white text-sm'>Create Account For</label>
                                     <select type="text" {...register("userTypes", {
                                         required: true,
                                     })} className="w-full px-3 py-2 border rounded-md border-gray-300 focus:outline-green-500 bg-blue-200 text-gray-900">
