@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
-import { FaLightbulb, FaLock, FaRecordVinyl } from "react-icons/fa";
+import { FaCheck, FaLightbulb, FaLock, FaRecordVinyl } from "react-icons/fa";
 import { BiTimeFive } from "react-icons/bi";
 import { CiCircleMore } from "react-icons/ci";
 import { MdWork } from 'react-icons/md';
@@ -72,10 +72,30 @@ const JobsDetails = () => {
          </div>
          <div className='text-start pt-4 bg-slate-600 rounded-xl p-6 text-white'>
             <p>{job_description}</p>
-            <Link className='text-blue-400 btn mt-3 hover:text-purple-400' href="">About the company</Link> 
             <div className="divider text-white"></div>
          </div>
-	    </div>
+         <div className='text-start pt-4 bg-slate-600 rounded-xl p-6 text-white'>
+          <h1 className='text-2xl mb-2'>About the company </h1>
+            <div className='flex justify-between'>
+            <div className='flex '>
+                <div className="avatar flex mt-2">
+                  <div className="w-16 rounded">
+                  <img src="https://img.freepik.com/premium-photo/composite-image-businessman-pointing-these-fingers-camera_1134-37846.jpg?size=626&ext=jpg&uid=R83218281&ga=GA1.1.1908891225.1665030381&semt=ais" />
+                </div>
+              </div>
+             <div className='ml-4'>
+             <p>OptimHire </p>
+              <p>231,528 followers </p>
+             </div>
+             </div>
+             <div>
+            <Link className='text-blue-400 btn rounded-2xl mb-2 hover:text-purple-400' href=""><FaCheck className='mr-2 text-xl'/> Following</Link> 
+             </div>
+            </div>
+           <p className='mt-2'>{job_details?.job?.job_title}  11-50 employees  43 on LinkedIn</p>
+           <p className='mt-5'>At Linearloop we provide the best web & mobile app development service for small to large scale businesses. Our efficient development process helps you to only focus on results instead of process overhead.</p>
+           </div>
+	       </div>
          </div>
          </div>
         </div>
