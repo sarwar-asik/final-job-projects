@@ -4,15 +4,15 @@ const Subscribe = () => {
     const [getEmail, setGetEmail] = useState("");
 
     const handleSubscribe = () => {
-        fetch(`http://localhost:5000/users/subscribe/${getEmail}`, {
+        fetch(`https://find-job-server.vercel.app/users/subscribe/${getEmail}`, {
             method: "PUT",
             headers: {
-                "content-type" : "application/json"
+                "content-type": "application/json"
             }
         })
-        .then((res) => res.json())
-        .then((data) => console.log(data))
-        .catch((err) => console.log(err))
+            .then((res) => res.json())
+            .then((data) => console.log(data))
+            .catch((err) => console.log(err))
     }
 
     return (
