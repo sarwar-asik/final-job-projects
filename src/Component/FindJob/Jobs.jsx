@@ -18,7 +18,7 @@ const Jobs = ({ allJobs, setSearch }) => {
             <div className='pt-10'>
                 <div className="flex items-center mb-3">
                     <input onChange={handleToChange} type="text" class="w-full py-1 px-3 border border-cyan-500 focus:outline-green-500 bg-blue-200 rounded" placeholder="Find your Interested jobs" />
-                    <button onClick={submitButton} className="btn btn-primary btn-sm rounded ml-[-78px]">Search</button>
+                    <button onClick={submitButton} className="btn bg-green-600 btn-sm rounded ml-[-78px]">Search</button>
                 </div>
             </div>
 

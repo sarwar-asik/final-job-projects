@@ -103,7 +103,7 @@ const FindJob = () => {
                                         </div>
                                     ))}
                                     <div className='flex mt-2 justify-center'>
-                                        <button onClick={handleToExp} className='btn w-full btn-sm btn-primary' type="submit">Apply</button>
+                                        <button onClick={handleToExp} className='btn w-full btn-sm bg-green-600' type="submit">Apply</button>
                                     </div>
                                 </div>
                             </div>
@@ -120,7 +120,7 @@ const FindJob = () => {
                                         </div>
                                     ))}
                                     <div className='flex mt-2 justify-center'>
-                                        <button className='btn w-full btn-sm btn-primary' type="submit">Apply</button>
+                                        <button className='btn w-full btn-sm bg-green-600' type="submit">Apply</button>
                                     </div>
                                 </div>
                             </div>
