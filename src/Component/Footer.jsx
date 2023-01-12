@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../ContextApi/AuthProvider/AuthProvider';
+import Subscribe from './Subscribe/Subscribe';
 
 const Footer = () => {
     const { user, LogOut } = useContext(AuthContext)
@@ -46,12 +47,7 @@ const Footer = () => {
                     <a className="link link-hover">Jobs</a>
                     <a className="link link-hover">Press kit</a>
                 </div>
-                <div>
-                    <span className="footer-title">Legal</span>
-                    <a className="link link-hover">Terms of use</a>
-                    <a className="link link-hover">Privacy policy</a>
-                    <a className="link link-hover">Cookie policy</a>
-                </div>
+                <Subscribe />
             </footer>
         </>
     );

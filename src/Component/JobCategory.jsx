@@ -2,9 +2,6 @@ import React, { useEffect, useState } from 'react';
 
 const JobCategory = () => {
     const [jobCategory, setJobCategory] = useState([])
-
-
-    console.log(jobCategory);
     useEffect(() => {
         fetch('JobCategory.json')
             .then(res => res.json())

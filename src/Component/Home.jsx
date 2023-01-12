@@ -6,6 +6,7 @@ import Contact from './Contact/Contact';
 import HiringCompany from './HiringCompany';
 import JobCategory from './JobCategory';
 import Login from './Login/Login';
+import PricingPlan from './PricingPlan/PricingPlan';
 
 const Home = () => {
     return (
@@ -27,6 +28,8 @@ const Home = () => {
             {/* this is company category */}
             <HiringCompany />
 
+            {/* Pricing Plan */}
+            <PricingPlan />
             {/* Learn sections  */}
             <div className='my-16 p-5 bg-slate-900 rounded-lg w-11/12 mx-auto'>
                 <div className='grid grid-cols-1 md:grid-cols-3 gap-5'>
