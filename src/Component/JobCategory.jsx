@@ -8,9 +8,9 @@ const JobCategory = () => {
             .then(data => setJobCategory(data))
     }, [])
     return (
-        <div
-        
-        className='py-10 w-11/12 mx-auto'>
+        <div className='container mx-auto'>
+            <div
+           className='py-10 w-11/12 mx-auto '>
             <div>
                 <h2 className='text-2xl py-10 text-center font-bold md:text-4xl '>Choice your Favorite Job</h2>
             </div>
@@ -26,6 +26,7 @@ const JobCategory = () => {
                     </div>)
                 }
             </div>
+        </div>
         </div>
     );
 };

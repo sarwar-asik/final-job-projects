@@ -39,8 +39,8 @@ const Contact = () => {
             );
     };
     return (
-        <div
-        
+        <div className="container mx-auto">
+            <div  
         className="pb-7" data-aos="fade-up" data-aos-duration="1500">
             <h2 className="text-3xl mt-5 mb-8 font-bold text-center">Contact Us</h2>
             <div className="w-3/4 grid md:grid-cols-2 sm:grid-cols-1 h-full  gap-6 mx-auto 
@@ -134,6 +134,7 @@ const Contact = () => {
                     </button>
                 </form>
             </div>
+        </div>
         </div>
     );
 };

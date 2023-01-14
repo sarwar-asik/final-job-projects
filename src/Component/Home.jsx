@@ -18,7 +18,7 @@ const Home = () => {
             style={{
                 backgroundColor: '#16a085',
               }}
-            className="hero p-16 mt-5 rounded-xl text-white">
+            className="hero p-16  text-white">
             <div className="hero-content flex-col lg:flex-row-reverse">
                 <img src={img2} className=" rounded-lg lg:w-1/2 shadow-2xl" alt='' />
                 <div>
@@ -51,8 +51,8 @@ const Home = () => {
             style={{
                 backgroundColor: '#16a085',
               }}
-            className='my-16 p-5 bg-slate-900 rounded-lg w-11/12 mx-auto'>
-                <div className='grid grid-cols-1 md:grid-cols-3 gap-5'>
+            className='my-16 p-16'>
+                {/* <div className='grid grid-cols-1 md:grid-cols-3 gap-5'>
                     <div className='flex justify-center items-center'>
                         <img src="https://static.naukimg.com/s/0/0/i/ff-services.png" alt="" />
                     </div>
@@ -68,6 +68,15 @@ const Home = () => {
                     <div className='flex justify-center items-center flex-col'>
                     <button className="btn w-[150px] btn-primary">Learn More</button>
                     </div>
+                </div> */}
+                <div>
+                    <h1 className='text-center text-white text-3xl font-bold'>Your Dream jobs Are Waiting</h1>
+                    <p className='text-center text-white my-5 font-bold'>over 1 million interactions, 50,000 success stories Make yours now.</p>
+                <div className='flex justify-center'>
+                <button className="btn btn-outline btn-warning mr-5">Search Job</button>
+                <button className="btn btn-outline bg-white">Apply job Now</button>
+
+                </div>
                 </div>
             </div>
 

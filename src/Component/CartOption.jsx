@@ -31,7 +31,8 @@ const CartOption = () => {
     ]
 
     return (
-        <div >
+        <div className='container mx-auto'>
+            <div className='container mx-auto'>
             <div className='text-center my-16'>
                  <h2 className='text-3xl font-semibold '>How It Works?</h2>
                  <p className='mt-4'>Job for anyone, anywhere</p>
@@ -44,6 +45,7 @@ const CartOption = () => {
                 ></CartOptionData>)
             }
             </div>
+        </div>
         </div>
     );
 };
