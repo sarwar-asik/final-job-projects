@@ -15,17 +15,24 @@ const HiringCompany = () => {
         
         className='py-10 w-11/12 mx-auto'>
             <div>
-                <h2 className='text-2xl py-10 text-center font-bold md:text-4xl text-white'>Top companies hiring now</h2>
+                <h2 className='text-2xl py-10 text-center font-bold md:text-4xl '>Top companies hiring now</h2>
             </div>
             {/* categories */}
             <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10'>
                 {
-                    companis.map(company => <div style={{
-                        backgroundColor: '#16a085',
-                      }}  className='text-black  p-6 rounded-lg' key={company.id}>
-                        <img className='w-full rounded-md' src={company.img} alt="" />
-                        <p className='text-3xl text-center mt-2 font-bold text-white'>{company.company_name}</p>
-                    </div>)
+                    companis.map(company => 
+                    <div
+                    key={company.id}
+                    className="card card-compact  bg-base-100 shadow-2xl">
+                       <figure className='p-3'><img src={company.img} alt="Shoes" /></figure>
+                           <div className="card-body">
+                          <p className='text-xl my-3 text-center mt-2 font-bold '>{company.company_name}</p>
+                            <div className="card-actions justify-end">
+                           <button className="btn text-white btn-outline w-full bg-green-600 rounded-lg">Book Now</button>
+                        </div>
+                       </div>
+                   </div>
+                    )
                 }
             </div>
         </div>

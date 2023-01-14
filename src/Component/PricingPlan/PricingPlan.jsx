@@ -5,7 +5,7 @@ const PricingPlan = () => {
     return (
         <div
         className='px-2 py-10'>
-            <h1 className="text-4xl text-white font-bold text-center my-5">Our Pricing Plan</h1>
+            <h1 className="text-4xl  font-bold text-center my-5">Our Pricing Plan</h1>
             <div className='grid mt-16 gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 text-white '>
                 <div
                 style={{

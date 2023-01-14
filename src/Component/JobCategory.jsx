@@ -12,7 +12,7 @@ const JobCategory = () => {
         
         className='py-10 w-11/12 mx-auto'>
             <div>
-                <h2 className='text-2xl py-10 text-center font-bold md:text-4xl text-white'>Choice your Favorite Job</h2>
+                <h2 className='text-2xl py-10 text-center font-bold md:text-4xl '>Choice your Favorite Job</h2>
             </div>
             <div className=' grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5'>
                 {

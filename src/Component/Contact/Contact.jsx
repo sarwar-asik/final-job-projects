@@ -129,7 +129,7 @@ const Contact = () => {
                         required
                         className="w-full p-6 bg-transparent border-2 resize-none text-white"
                     ></textarea>
-                    <button type="submit" value="Send" className="btn btn-primary text-white send-message">
+                    <button type="submit" value="Send" className="btn text-white btn-outline w-full bg-green-600 rounded-lg">
                         Send Message
                     </button>
                 </form>
