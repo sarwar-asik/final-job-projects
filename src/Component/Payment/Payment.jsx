@@ -99,7 +99,7 @@ const Payment = ({ data }) => {
     }, [amount])
 
     return (
-        <div className='w-full'>
+        <div  className='w-full'>
             <form onSubmit={handleSubmit}>
                 <CardElement
                     options={{
@@ -126,7 +126,7 @@ const Payment = ({ data }) => {
                 </div>
             </form>
 
-            <div className='flex justify-center'>
+            <div  className='flex justify-center'>
                 <GooglePayButton
                     className=' '
                     buttonSizeMode='fill'

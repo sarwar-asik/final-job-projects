@@ -23,12 +23,11 @@ const HiringCompany = () => {
                     companis.map(company => 
                     <div
                     key={company.id}
-                    className="card card-compact  bg-base-100 shadow-2xl">
+                    className="card card-compact p-6 bg-base-100 shadow-2xl">
                        <figure className='p-3'><img src={company.img} alt="Shoes" /></figure>
                            <div className="card-body">
                           <p className='text-xl my-3 text-center mt-2 font-bold '>{company.company_name}</p>
                             <div className="card-actions justify-end">
-                           <button className="btn text-white btn-outline w-full bg-green-600 rounded-lg">Book Now</button>
                         </div>
                        </div>
                    </div>
