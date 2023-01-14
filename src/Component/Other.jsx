@@ -15,7 +15,6 @@ const Other = () => {
                 <Link className='flex mt-4 justify-center' to={'/login'}>
                     <button className="btn text-white btn-outline w-[200px] bg-green-600 rounded-lg">Sign-Up Now</button>
                 </Link>
-
         </div>
     );
 };

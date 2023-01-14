@@ -8,6 +8,7 @@ import SmallSpinner from '../Spinner/SmallSpinner';
 import { AuthContext } from '../../ContextApi/AuthProvider/AuthProvider';
 import { checkUserType } from '../../AllApi/CheckUserType/CheckUserType';
 import { setAuthToken } from '../../AllApi/GetTokenApi/GetTokenApi';
+import image from '../../asset/login/login.webp'
 
 const Login = () => {
     const [userEmail, setUserEmail] = useState('')
@@ -88,10 +89,14 @@ const Login = () => {
             })
     }
     return (
-        <div className='min-h-screen bg-no-repeat rounded-xl mt-28 bg-cover' style={{ backgroundImage: `url(${img2})` }}>
-            <h1 className="text-4xl text-white pt-28 text-center font-bold">Login now!</h1>
-            <div className="hero mt-3">
-                <div className=" lg:w-4/12 md:8/12 sm:11/12 mx-auto rounded-lg shadow-2xl bg-slate-900">
+        <div>
+           <h1 className="text-4xl text-center font-bold">Login now!</h1>
+           <div className="hero">
+              <div className="hero-content flex-col lg:flex-row">
+                  <img src={image} alt='' className="max-w-sm rounded-lg shadow-2xl" />
+              <div>
+              <div  className="hero mt-3 text-black">
+                <div className="">
                     <form
                         onSubmit={handleSubmit}
                         noValidate=''
@@ -100,7 +105,7 @@ const Login = () => {
                     >
                         <div className='space-y-4'>
                             <div>
-                                <label htmlFor='email' className='block mb-2 text-white text-sm'>
+                                <label htmlFor='email' className='block mb-2  text-sm'>
                                     Email address
                                 </label>
                                 <input onBlur={event => setUserEmail(event.target.value)} type='email' name='email' id='email' required placeholder='Enter Your Email Here'
@@ -110,7 +115,7 @@ const Login = () => {
                             </div>
                             <div>
                                 <div className='flex justify-between'>
-                                    <label htmlFor='password' className='text-sm text-white mb-2'>
+                                    <label htmlFor='password' className='text-sm  mb-2'>
                                         Password
                                     </label>
                                 </div>
@@ -123,7 +128,7 @@ const Login = () => {
                         <div>
                             <PrimaryButton
                                 type='submit'
-                                classes='w-full px-8 py-3 font-semibold rounded-md bg-gray-900 hover:bg-gray-700 hover:text-white text-white'
+                                classes='w-full px-8 py-3 font-semibold rounded-md bg-gray-900 hover:bg-gray-700 hover: '
                             >
                                 {loading ? <SmallSpinner /> : 'Sign in'}
                             </PrimaryButton>
@@ -132,24 +137,24 @@ const Login = () => {
                     <div className='space-y-1 w-11/12 mx-auto'>
                         <button
                             onClick={handleReset}
-                            className='text-xs hover:underline text-white'
+                            className='text-xs hover:underline '
                         >
                             Forgot password?
                         </button>
                     </div>
                     <div>
-                        <p className='px-3 text-sm text-center my-2 text-white'>
+                        <p className='px-3 text-sm text-center my-2 '>
                             Direct Login with social accounts
                         </p>
                     </div>
                     <div className='flex justify-center w-11/12 mx-auto'>
                         <PrimaryButton handler={handleGoogleSignin} type='submit'
-                            classes='w-full px-8 py-3 font-semibold rounded-md bg-gray-900 hover:bg-gray-700 hover:text-white text-white'
+                            classes='w-full px-8 py-3 font-semibold rounded-md bg-gray-900 hover:bg-gray-700 hover: '
                         >
                             {loading ? <SmallSpinner /> : <div className='flex items-center justify-around'>Continue With <FaGoogle className='ml-2' /></div>}
                         </PrimaryButton>
                     </div>
-                    <p className='p-6 text-sm text-center text-white'>
+                    <p className='p-6 text-sm text-center '>
                         Don't have an account yet?{' '}
                         <Link to='/register' className='hover:underline font-semibold text-purple-500 '>
                             Register Now
@@ -157,9 +162,15 @@ const Login = () => {
                         .
                     </p>
                 </div>
-            </div>
-        </div>
+            </div>       
+           </div>
+    </div>
+</div>
+ </div>
     );
 };
 
 export default Login;
+
+
+
