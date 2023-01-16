@@ -24,6 +24,7 @@ import CheckOut from '../Component/Payment/CheckOut';
 import Verification from '../Component/Login/Verification';
 import AddAJobs from '../DashBoard/RecruiterPage/AddAJobs/AddAJobs';
 import JobsDetails from '../Component/FindJob/JobsDetails';
+import AllProfile from '../Component/FindJob/RecruiterProfile/AllProfile';
 
 
 const router = createBrowserRouter([
@@ -59,6 +60,10 @@ const router = createBrowserRouter([
             {
                 path: '/verification',
                 element: <Verification />
+            },
+            {
+                path: '/allfrofile',
+                element: <AllProfile></AllProfile>
             },
             {
                 path: '/details/:id',
