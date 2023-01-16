@@ -11,7 +11,11 @@ const NavBer = () => {
     const { user, LogOut } = useContext(AuthContext)
 
     return (
-        <div className="navbar bg-slate-100 text-white">
+        <div
+        style={{
+            backgroundColor: '#16a085',
+          }}
+        className="navbar bg-slate-100 text-white">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost">
@@ -45,12 +49,11 @@ const NavBer = () => {
                                     <li><Link to={'/register'}>Sign Up</Link></li>
                                 </>
                         }
-
                     </ul>
                 </div>
             </div>
             <div className="navbar-center">
-                <Link to={'/'} className="btn btn-ghost flex items-center normal-case text-white font-bold text-2xl">
+                <Link to={'/'} className="btn btn-ghost flex items-center normal-case bg-black font-bold text-2xl">
 
                     <img className='w-44' src={logo} alt="" />
                 </Link>

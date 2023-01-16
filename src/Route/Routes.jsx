@@ -62,7 +62,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/details/:id',
-                loader: ({ params }) => fetch(`https://find-job-server.vercel.app/jobDetails/${params.id}`),
+                loader: ({ params }) => fetch(`http://localhost:5000/jobDetails/${params.id}`),
                 element: <JobsDetails />
             }
         ]

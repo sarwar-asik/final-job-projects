@@ -39,8 +39,10 @@ const Contact = () => {
             );
     };
     return (
-        <div className="pb-7" data-aos="fade-up" data-aos-duration="1500">
-            <h2 className="text-3xl text-white mt-5 mb-8 font-bold text-center">Contact Us</h2>
+        <div className="container mx-auto">
+            <div  
+        className="pb-7" data-aos="fade-up" data-aos-duration="1500">
+            <h2 className="text-3xl mt-5 mb-8 font-bold text-center">Contact Us</h2>
             <div className="w-3/4 grid md:grid-cols-2 sm:grid-cols-1 h-full  gap-6 mx-auto 
             "
             >
@@ -50,19 +52,25 @@ const Contact = () => {
                     className="flex flex-col gap-5"
                 >
                     <article
+                    style={{
+                        backgroundColor: '#16a085',
+                      }}
                         className="bg-slate-900 p-5 md:w-8/12 sm:w-full  rounded-2xl 
                         text-center border-red-300 text-white"
                     >
                         <BiEnvelope className="mb-2 text-center hover:bg-green-500 inline-block text-3xl" />
                         <h4>Email</h4>
                         <h5>Company@gmail.com</h5>
-                        <a
+                        <a 
                             href="#"
                         >
                             Send a message
                         </a>
                     </article>
                     <article
+                    style={{
+                        backgroundColor: '#16a085',
+                      }}
                         className="bg-slate-900 p-5 md:w-8/12 sm:w-full  rounded-2xl 
                          text-center border-red-300 text-white"
                     >
@@ -76,6 +84,9 @@ const Contact = () => {
                         </a>
                     </article>
                     <article
+                    style={{
+                        backgroundColor: '#16a085',
+                      }}
                         className="bg-slate-900 p-5 md:w-8/12 sm:w-full  rounded-2xl 
                         text-center border-red-300 text-white"
                     >
@@ -111,17 +122,19 @@ const Contact = () => {
                         className="w-full p-6 bg-transparent border-2 resize-none text-white"
                     />
                     <textarea
+                
                         name="message"
                         rows="7"
                         placeholder="Your Message"
                         required
                         className="w-full p-6 bg-transparent border-2 resize-none text-white"
                     ></textarea>
-                    <button type="submit" value="Send" className="btn btn-primary text-white send-message">
+                    <button type="submit" value="Send" className="btn text-white btn-outline w-full bg-green-600 rounded-lg">
                         Send Message
                     </button>
                 </form>
             </div>
+        </div>
         </div>
     );
 };

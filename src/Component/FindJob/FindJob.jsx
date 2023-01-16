@@ -1,5 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
+import { ServerApi } from '../../AllApi/MainApi';
 import Jobs from './Jobs';
 
 const FindJob = () => {
@@ -52,7 +53,7 @@ const FindJob = () => {
         expChecked.includes(item) ? "checked-item" : "not-checked-item";
 
     useEffect(() => {
-        fetch(`https://find-job-server.vercel.app/jobs?jobstype=${search}`)
+        fetch(`${ServerApi}/jobs?jobstype=${search}`)
             .then(res => res.json())
             .then(data => {
                 setAllJobs(data)
@@ -63,7 +64,7 @@ const FindJob = () => {
 
     const handleToExp = () => {
 
-        fetch('https://find-job-server.vercel.app/jobs/exp', {
+        fetch(`${ServerApi}/jobs/exp`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -79,8 +80,9 @@ const FindJob = () => {
     }
 
     return (
-        <div className='bg-white'>
-            <div className="drawer drawer-end drawer-mobile bg-white max-w-[1440px]">
+        <div>
+            <div className='bg-white'>
+            <div className="drawer drawer-end drawer-mobile bg-white ">
                 <input id="dashboard-drawer" type="checkbox" className="drawer-toggle" />
 
                 <div className="drawer-content">
@@ -130,6 +132,7 @@ const FindJob = () => {
 
             </div>
 
+        </div>
         </div>
     );
 };

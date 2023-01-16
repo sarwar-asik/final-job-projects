@@ -7,7 +7,11 @@ const Footer = () => {
     const { user, LogOut } = useContext(AuthContext)
     return (
         <>
-            <footer className="footer p-10 bg-slate-700 text-white rounded my-6">
+            <footer 
+            style={{
+                backgroundColor: '#16a085',
+              }}
+            className="footer p-14 bg-slate-700 text-white rounded  ">
                 <div>
                     <div className="grid grid-flow-col mb-4 gap-4 font-bold">
                         <Link to={'/'}>Homepage</Link>

@@ -10,7 +10,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url(./asset/bg-img.jpg);
+  /* background-image: url(./asset/bg-img.jpg); */
   min-height: 100vh;
 }
 
