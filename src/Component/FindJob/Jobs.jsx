@@ -10,8 +10,7 @@ const Jobs = ({ allJobs, setSearch }) => {
         setSearchValue(ser)
     }
     const submitButton = () => {
-        const search=searchValue.toLowerCase()
-        setSearch(search)
+        setSearch(searchValue)
     }
 
     return (
