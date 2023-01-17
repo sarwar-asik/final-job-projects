@@ -24,6 +24,7 @@ import CheckOut from '../Component/Payment/CheckOut';
 import Verification from '../Component/Login/Verification';
 import AddAJobs from '../DashBoard/RecruiterPage/AddAJobs/AddAJobs';
 import JobsDetails from '../Component/FindJob/JobsDetails';
+import AllProfile from '../Component/FindJob/RecruiterProfile/AllProfile';
 
 
 const router = createBrowserRouter([
@@ -61,8 +62,12 @@ const router = createBrowserRouter([
                 element: <Verification />
             },
             {
+                path: '/allfrofile',
+                element: <AllProfile></AllProfile>
+            },
+            {
                 path: '/details/:id',
-                loader: ({ params }) => fetch(`https://find-job-server.vercel.app/jobDetails/${params.id}`),
+                loader: ({ params }) => fetch(`http://localhost:5000/jobDetails/${params.id}`),
                 element: <JobsDetails />
             }
         ]

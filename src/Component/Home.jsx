@@ -2,27 +2,43 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import img2 from '../asset/bg.jpg';
 import PrimaryButton from './Button/PrimaryButton';
+import CartOption from './CartOption';
 import Contact from './Contact/Contact';
 import HiringCompany from './HiringCompany';
 import JobCategory from './JobCategory';
 import Login from './Login/Login';
+import Other from './Other';
 import PricingPlan from './PricingPlan/PricingPlan';
 
 const Home = () => {
     return (
         <div>
             {/* this is banner */}
-            <div className=" min-h-screen bg-no-repeat bg-cover" style={{ backgroundImage: `url(${img2})` }}>
-                <div className="flex md:justify-end md:mr-40 md:pt-10 justify-center">
-                    <div>
-                        <h1 className="text-5xl text-black font-bold">Find Your Job</h1>
-                        <p className="py-6 text-black w-[350px]">Find full or part-time jobs in England, Scotland and Wales.
-                            Use the ‘Find a job’ service to search and apply for jobs.
-                            This service has replaced Universal Jobmatch.</p>
-                        <Link to={'/contact'}> <PrimaryButton>Contact US</PrimaryButton></Link>
-                    </div>
+            <div
+            style={{
+                backgroundColor: '#16a085',
+              }}
+            className="hero p-16  text-white">
+            <div className="hero-content flex-col lg:flex-row-reverse">
+                <img src={img2} className=" rounded-lg lg:w-1/2 shadow-2xl" alt='' />
+                <div>
+                    <h1 className="text-5xl font-bold">VlaunChu Jobs !</h1>
+                    <p className="py-6">We are looking for mission-oriented candidates who are passionate about global health. Looking for skilled professionals to help advance our life-saving mission. Trusted information. Fact-based content. Highlights: Donation Option Available, Newsletter Available.</p>
+            <div className="form-control">
+             <div className="input-group">
+             <input type="text" placeholder="Job title,keywords..." className="input input-bordered text-black" />
+                <button className="btn btn-square ">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                </button>
+              </div>
+               </div>
                 </div>
             </div>
+        </div>
+        
+        <Other></Other>
+             
+        <CartOption></CartOption>
             {/* this is job category */}
             <JobCategory />
             {/* this is company category */}
@@ -31,8 +47,12 @@ const Home = () => {
             {/* Pricing Plan */}
             <PricingPlan />
             {/* Learn sections  */}
-            <div className='my-16 p-5 bg-slate-900 rounded-lg w-11/12 mx-auto'>
-                <div className='grid grid-cols-1 md:grid-cols-3 gap-5'>
+            <div
+            style={{
+                backgroundColor: '#16a085',
+              }}
+            className='my-16 p-16'>
+                {/* <div className='grid grid-cols-1 md:grid-cols-3 gap-5'>
                     <div className='flex justify-center items-center'>
                         <img src="https://static.naukimg.com/s/0/0/i/ff-services.png" alt="" />
                     </div>
@@ -46,9 +66,17 @@ const Home = () => {
                         </div>
                     </div>
                     <div className='flex justify-center items-center flex-col'>
-                        <PrimaryButton className='btn'>Learn More</PrimaryButton>
-                        
+                    <button className="btn w-[150px] btn-primary">Learn More</button>
                     </div>
+                </div> */}
+                <div>
+                    <h1 className='text-center text-white text-3xl font-bold'>Your Dream jobs Are Waiting</h1>
+                    <p className='text-center text-white my-5 font-bold'>over 1 million interactions, 50,000 success stories Make yours now.</p>
+                <div className='flex justify-center'>
+                <button className="btn btn-outline btn-warning mr-5">Search Job</button>
+                <button className="btn btn-outline bg-white">Apply job Now</button>
+
+                </div>
                 </div>
             </div>
 
