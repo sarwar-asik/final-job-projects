@@ -6,5 +6,3 @@ then : npm I
 
 then: npm start.
 
-admin: coder@akkas2.com
-pass: yyyyyyyy
