@@ -25,6 +25,7 @@ import Verification from '../Component/Login/Verification';
 import AddAJobs from '../DashBoard/RecruiterPage/AddAJobs/AddAJobs';
 import JobsDetails from '../Component/FindJob/JobsDetails';
 import AllProfile from '../Component/FindJob/RecruiterProfile/AllProfile';
+import { ServerApi } from '../AllApi/MainApi';
 
 
 const router = createBrowserRouter([
@@ -67,7 +68,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/details/:id',
-                loader: ({ params }) => fetch(`http://localhost:5000/jobDetails/${params.id}`),
+                loader: ({ params }) => fetch(`${ServerApi}/jobDetails/${params.id}`),
                 element: <JobsDetails />
             }
         ]
